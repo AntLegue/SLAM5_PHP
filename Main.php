@@ -12,9 +12,13 @@
   //1 établissement : La Cavale Blanche
   $monEts= new etablissement((int)1885, 'La Cavale Blanche', $mesSalles);
 
-  foreach ($monEts-> getmesSalles() as $value) {
-    print_r($value);
+  $compteur = 0;
+
+  foreach ($monEts-> getmesSalles() as $uneSalle) {
+    $compteur = $compteur + 1;
+    echo "Salle ".$compteur.": ";
+    print_r($uneSalle-> Sallenom);
     echo "\r\n";
-  }
+}
 
 ?>
